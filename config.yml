@@ -1,0 +1,14 @@
+language: es
+
+pipeline:
+  - name: "SpacyNLP"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "DIETClassifier"
+    entity_recognition: False
+    epochs: 50
+
+policies:
+  - name: TEDPolicy
+  - name: MemoizationPolicy
+  - name: MappingPolicy

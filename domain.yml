@@ -1,0 +1,37 @@
+intents:
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  - humor_bien
+  - humor_mal
+  - reto_bot
+
+responses:
+  utter_saludo:
+  - text: "¡Hola! ¿Cómo estás?"
+    buttons:
+    - title: "bien"
+      payload: "/humor_bien"
+    - title: "mal"
+      payload: "/humor_mal"
+
+  utter_animo:
+  - text: "Aquí tienes algo para animarte:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_ha_sido_de_ayuda:
+  - text: "¿Ha sido de ayuda?"
+
+  utter_feliz:
+  - text: "¡Genial! ¡Sigue adelante!"
+
+  utter_despedida:
+  - text: "Adiós."
+
+  utter_soy_un_bot:
+  - text: "Soy un bot, Rasa es mi motor."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
