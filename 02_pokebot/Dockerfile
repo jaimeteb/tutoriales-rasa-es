@@ -8,5 +8,6 @@ RUN pip install -r requirements.txt
 COPY . .
 
 RUN rasa train
+RUN chmod a+x entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
