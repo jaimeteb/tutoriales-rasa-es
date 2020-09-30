@@ -27,9 +27,8 @@ responses:
   - text: "¿Qué Pokémon desear buscar? Ingresa un nombre o un número."
     
   utter_info_pokemon:
-  - text: "N.°{numero}\n
-  Nombre: {nombre}\n
-  Tipos: {tipos}"
+  - text: "N.°{numero} \nNombre: {nombre} \nTipos: {tipos}"
+    image: "{imagen}"
     
   utter_pokemon_no_encontrado:
   - text: "Lo siento, no se encontraron resultados."
