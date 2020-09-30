@@ -21,3 +21,9 @@
 ## saludo
 * saludo
   - utter_saludo
+  - utter_ask_pokemon
+
+## start
+* start
+  - utter_saludo
+  - utter_ask_pokemon

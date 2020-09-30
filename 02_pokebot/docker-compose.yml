@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  rasa:
+    build:
+      context: .
+    env_file: .env
+    volumes:
+      - models:/app/models
+    expose:
+      - 5005
+
+  caddy:
+    image: caddy
+    command: caddy reverse-proxy --from chatbotdemo.ml --to rasa:5005
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  models:
+  caddy_data:
+  caddy_config:

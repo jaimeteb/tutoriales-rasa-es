@@ -4,6 +4,7 @@ intents:
   - afirmar
   - negar
   
+  - start
   - buscar_pokemon
 
 entities:
