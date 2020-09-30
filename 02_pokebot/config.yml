@@ -6,7 +6,7 @@ pipeline:
   - name: "SpacyFeaturizer"
   - name: "RegexFeaturizer"
   - name: "DIETClassifier"
-    entity_recognition: False
+    entity_recognition: True
     epochs: 50
 
 policies:

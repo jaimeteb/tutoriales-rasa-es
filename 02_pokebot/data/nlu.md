@@ -30,6 +30,13 @@
 - [Qwilfish](nombre_pokemon)
 - conocer más sobre [Palkia](nombre_pokemon)
 - [Venomoth](nombre_pokemon)
+- buscar a [Crabrawler](nombre_pokemon)
+- [Stoutland](nombre_pokemon)
+- buscar [Hattrem](nombre_pokemon)
+- [Sobble](nombre_pokemon)
+- [Oranguru](nombre_pokemon)
+- conocer más sobre [Jumpluff](nombre_pokemon)
+- [Pikachu](nombre_pokemon)
 - número [73](numero_pokemon)
 - pokemon numero [43](numero_pokemon)
 - [67](numero_pokemon)
@@ -37,6 +44,13 @@
 - [3](numero_pokemon)
 - [808](numero_pokemon)
 - [230](numero_pokemon)
+- número [173](numero_pokemon)
+- pokemon numero [66](numero_pokemon)
+- [100](numero_pokemon)
+- buscar pokemon [578](numero_pokemon)
+- [99](numero_pokemon)
+- [601](numero_pokemon)
+- [79](numero_pokemon)
 
 ## regex:numero_pokemon
 - [0-9]{1,3}
