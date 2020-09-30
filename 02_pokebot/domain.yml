@@ -1,0 +1,39 @@
+intents:
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  
+  - buscar_pokemon
+
+entities:
+  - nombre_pokemon
+  - numero_pokemon
+
+slots:
+  nombre_pokemon:
+    type: text
+  numero_pokemon:
+    type: text
+
+actions:
+  - action_buscar_pokemon
+
+responses:
+  utter_saludo:
+  - text: "¡Hola amigo! Bienvenido al Pokébot."
+
+  utter_ask_pokemon:
+  - text: "¿Qué Pokémon desear buscar? Ingresa un nombre o un número."
+    
+  utter_info_pokemon:
+  - text: "N.°{numero}\n
+  Nombre: {nombre}\n
+  Tipos: {tipos}"
+    
+  utter_pokemon_no_encontrado:
+  - text: "Lo siento, no se encontraron resultados."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
