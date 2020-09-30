@@ -46,9 +46,6 @@ class ActionBuscarPokemon(Action):
             req = requests.get(POKEAPI_URL + "pokemon/" + nombre_pokemon.lower())
         elif numero_pokemon and not nombre_pokemon:
             req = requests.get(POKEAPI_URL + "pokemon/" + numero_pokemon)
-        # else:
-        #     dispatcher.utter_message(template="utter_pokemon_no_encontrado")
-        #     return [AllSlotsReset()]
         
         if req.status_code == 404:
             dispatcher.utter_message(template="utter_pokemon_no_encontrado")
