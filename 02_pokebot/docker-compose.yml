@@ -2,8 +2,7 @@ version: "3"
 
 services:
   rasa:
-    build:
-      context: .
+    image: us.gcr.io/docker-compose-270405/pokebot:latest
     env_file: .env
     volumes:
       - models:/app/models
