@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  rasa:
+    build:
+      context: .
+    env_file: .env
+    volumes:
+      - models:/app/models
+    ports:
+      - 5005:5005
+
+volumes:
+  models:
