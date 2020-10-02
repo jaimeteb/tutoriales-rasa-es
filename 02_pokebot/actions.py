@@ -56,12 +56,19 @@ class ActionBuscarPokemon(Action):
         info_nombre_pokemon = info.get("name").title()
         info_tipos_pokemon = ", ".join([POKEMON_TIPOS.get(t.get("type").get("name")) for t in info.get("types")])
         info_imagen_pokemon = info.get("sprites").get("front_default")
-        
-        dispatcher.utter_message(
-            template="utter_info_pokemon",
-            numero=info_numero_pokemon,
-            nombre=info_nombre_pokemon,
-            tipos=info_tipos_pokemon,
-            imagen=info_imagen_pokemon
-        )
+        if info_imagen_pokemon:
+            dispatcher.utter_message(
+                template="utter_info_pokemon",
+                numero=info_numero_pokemon,
+                nombre=info_nombre_pokemon,
+                tipos=info_tipos_pokemon,
+                imagen=info_imagen_pokemon
+            )
+        else:
+            dispatcher.utter_message(
+                template="utter_info_pokemon_sin_imagen",
+                numero=info_numero_pokemon,
+                nombre=info_nombre_pokemon,
+                tipos=info_tipos_pokemon
+            )
         return [AllSlotsReset()]

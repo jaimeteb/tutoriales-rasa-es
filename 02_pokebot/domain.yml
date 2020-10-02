@@ -26,6 +26,9 @@ responses:
   utter_info_pokemon:
   - text: "**N.°**{numero} \n**Nombre**: {nombre} \n**Tipos**: {tipos}"
     image: "{imagen}"
+
+  utter_info_pokemon_sin_imagen:
+  - text: "**N.°**{numero} \n**Nombre**: {nombre} \n**Tipos**: {tipos}"
     
   utter_pokemon_no_encontrado:
   - text: "Lo siento, no se encontraron resultados. 😥"
