@@ -1,0 +1,85 @@
+intents:
+  - solicitar_restaurante:
+      use_entities: []
+  - charla:
+      use_entities: []
+  - informar
+  - afirmar
+  - negar
+  - detener
+  - gracias
+  - saludar
+  - reto_bot
+
+entities:
+  - cocina
+  - asiento
+  - comentarios
+  - number # duckling
+
+slots:
+  cocina:
+    type: unfeaturized
+    auto_fill: false
+  numero_personas:
+    type: unfeaturized
+    auto_fill: false
+  asiento_exterior:
+    type: unfeaturized
+    auto_fill: false
+  preferencias:
+    type: unfeaturized
+    auto_fill: false
+  comentarios:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+
+responses:
+  utter_ask_cocina:
+    - text: "¿Qué tipo de cocina?"
+  utter_ask_numero_personas:
+    - text: "¿Para cuántas personas?"
+  utter_ask_asiento_exterior:
+    - text: "¿Quieres un asiento en el exterior?"
+  utter_ask_preferencias:
+    - text: "Por favor proporciona preferencias adicionales"
+  utter_ask_comentarios:
+    - text: "Por favor proporciona comentarios sobre tu experiencia hasta ahora"
+  utter_submit:
+    - text: "¡Listo!"
+  utter_valores_slots:
+    - text: "Haré una búsqueda de restaurantes con los siguientes parámetros:\n
+             - Cocina: {cocina}\n
+             - Número de personas: {numero_personas}\n
+             - Asiento exterior: {asiento_exterior}\n
+             - Preferencias: {preferencias}\n
+             - Comentarios: {comentarios}"
+  utter_denada:
+    - text: "De nada 😊"
+  utter_charla:
+    - text: "Charla"
+  utter_ask_continuar:
+    - text: "¿Quieres continuar?"
+  utter_cocina_equivocada:
+    - text: "El tipo de cocina no se encuentra en nuestra base de datos, inténtalo de nuevo por favor"
+  utter_numero_personas_equivocada:
+    - text: "El número de personas debe ser un número entero positivo, intenta de nuevo por favor"
+  utter_asiento_exterior_equivocado:
+    - text: "No pude interpretar tu respuesta como afirmación o negación, intenta de nuevo por favor"
+  utter_default:
+    - text: "Lo siento, no pude entender eso, por favor intenta con otra entrada"
+  utter_saludar:
+    - text: "¡Hola! Soy un asistente para búsquedas de restaurantes, ¿cómo puedo ayudarte?"
+  utter_soybot:
+    - text: "Soy un bot, hecho en Rasa"
+  utter_restart:
+    - text: "Reiniciando"
+
+forms:
+  - restaurante_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

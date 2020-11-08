@@ -1,0 +1,306 @@
+## intent:saludar
+- Hola
+- Oye
+- Hola bot
+- Hey bot
+- Hola
+- Buenos días
+- Hola de nuevo
+- Hola amigos
+- Hola señor
+- ¡hola amigo!
+- Hola
+- saludos
+- Hola todos
+- Hola hay alguien ahí
+- hola robot
+- hola
+- oye
+- hola hola
+- Oye
+- hey hey
+- Hola a todos
+- Hola
+- Hola
+- ey
+- Hola
+- ¿Hola?
+- ¡Ey bot!
+- Hola amigo
+
+## intent:solicitar_restaurante
+- estoy buscando un restaurante
+- ¿Puedo conseguir comida [sueca](cocina) en cualquier área?
+- un restaurante que sirve comida [caribeña](cocina)
+- quisiera un restaurante
+- Estoy buscando un restaurante que sirva comida [mediterránea](cocina)
+- ¿Puedo encontrar un restaurante que sirva comida [china](cocina)?
+- Estoy buscando un lugar que sirva comida [indonesa](cocina) para tres
+- necesito encontrar un restaurante
+- Uh, estoy buscando un restaurante que sirva comida [kosher](cocina)
+- ¿Puedo encontrar un restaurante y que sirve comida [brasileña](cocina)?
+- Estoy buscando un restaurante que sirva comida [italiana](cocina)
+- restaurante por favor
+- me gustaría reservar una mesa para dos con cocina [española](cocina)
+- necesito una mesa para 4
+- Reservame una mesa para tres en el restaurante [italiano](cocina)
+- ¿Puedes reservar una mesa para 5?
+- Me gustaría reservar una mesa para 2
+- buscando una mesa en el restaurante [mexicano](cocina) para cinco
+- búscame una mesa para 7 personas
+- ¿Puedo conseguir una mesa para cuatro en algún lugar que sirvan comida [griega](cocina)?
+
+## intent:afirmar
+- sí, un restaurante barato que sirve comida internacional.
+- correcto
+- Sip
+- uh si
+- vamos a hacerlo
+- Si
+- uh si
+- um si
+- si por supuesto
+- eso es correcto
+- sí Sí
+- Correcto
+- sí
+- si
+- si claro
+- si y no me importa
+- exacto
+- me encanta eso
+
+## intent:negar
+- No
+- sin nueva selección
+- no, gracias
+- no gracias
+- UH no
+- claro que no
+- Tiene algo más
+- no, esto no me funciona
+
+## intent:informar
+- comida [afgana](cocina)
+- qué tal [asiático oriental](cocina)
+- ¿Qué pasa con la comida [india](cocina)?
+- uh, ¿qué tal el tipo de comida [turca](cocina)?
+- um [inglés](cocina)
+- Estoy buscando comida [toscana](cocina)
+- me gustaría comida [marroquí](cocina)
+- [mariscos](cocina)
+- comida [francesa](cocina)
+- Sirve comida [británica](cocina)
+- id como [canapés](cocina)
+- sirviendo comida [jamaicana](cocina)
+- um ¿qué pasa con la comida [italiana](cocina)?
+- Estoy buscando comida de [córcega](cocina)
+- Estoy buscando comida [mundial](cocina)
+- sirve comida [francesa](cocina)
+- ¿Qué tal la comida [india](cocina)?
+- ¿Puedo conseguir comida [china](cocina)?
+- comida [irlandesa](cocina)
+- comida [inglesa](cocina)
+- comida [española](cocina)
+- ¿Qué tal uno que sirve comida [portuguesa](cocina) y es barato
+- [alemán](cocina)
+- comida [coreana](cocina)
+- Estoy buscando comida [rumana](cocina)
+- Sirve [canapés](cocina) comida
+- [gastropub](cocina)
+- quiero comida [francesa](cocina)
+- ¿Qué tal el tipo de comida [europea moderna](cocina)?
+- debe servir comida [escandinava](cocina)
+- cómo [europea](cocina)
+- ¿Qué tal la comida [europea](cocina)?
+- sirve comida [tradicional](cocina)
+- comida [indonesia](cocina)
+- [europeo moderno](cocina)
+- sirve [brasileño](cocina)
+- me gustaría comida [europea moderna](cocina)
+- buscando comida [libanesa](cocina)
+- [portugués](cocina)
+- [europeo](cocina)
+- quiero comida [polaca](cocina)
+- me gustaría [tailandés](cocina)
+- quiero encontrar comida [marroquí](cocina)
+- [afgano](cocina)
+- comida [escocesa](cocina)
+- ¿qué tal [vietnamita](cocina)?
+- hola estoy buscando comida [mexicana](cocina)
+- ¿Qué tal el tipo de comida [india](cocina)?
+- comida [polinesia](cocina)
+- cocina [mexicana](cocina)
+- en cambio, podría ser para cuatro personas
+- cualquier comida [japonesa](cocina)
+- ¿Qué pasa con la comida [tailandesa](cocina)?
+- ¿Qué tal la comida [asiática oriental](cocina)?
+- Estoy buscando comida [japonesa](cocina)
+- Estoy buscando comida [belga](cocina)
+- estoy buscando comida [turca](cocina)
+- servir comida [córcega](cocina)
+- sirviendo [gastro pub](cocina:gastropub)
+- ¿Hay comida [británica](cocina)?
+- [mundo](cocina) comida
+- Estoy buscando algo que sirva comida [japonesa](cocina)
+- id como un [griego](cocina)
+- Estoy buscando comida [malaya](cocina)
+- quiero encontrar comida de [mundo](cocina)
+- sirve comida [panasiática](cocina:asiática)
+- buscando comida [afgana](cocina)
+- que sirve comida [portuguesa](cocina)
+- comida [asiática oriental](cocina:asiática)
+- comida [rusa](cocina)
+- [córcega](cocina)
+- [asiático oriental](cocina:asiática)
+- servir comida [vasca](cocina)
+- ¿qué tal [italiano](cocina)
+- buscando comida [española](cocina) en el centro de la ciudad
+- debe servir comida [gastropub](cocina)
+- comida [galesa](cocina)
+- quiero comida [vegetariana](cocina)
+- Estoy buscando comida [sueca](cocina)
+- um, ¿qué tal la comida [china](cocina)?
+- [mundo](cocina) comida
+- ¿Puedo tomar un [marisco](cocina) por favor?
+- ¿Qué tal la comida [italiana](cocina)?
+- ¿qué tal [coreano](cocina)
+- [córcega](cocina) comida
+- [escandinavo](cocina)
+- comida [vegetariana](cocina)
+- ¿qué pasa con [italiano](cocina)
+- ¿Qué tal la comida [portuguesa](cocina)?
+- servir comida [francesa](cocina)
+- comida [toscana](cocina)
+- ¿qué tal uh [gastropub](cocina)?
+- estoy buscando comida [creativa](cocina)
+- Estoy buscando [malayo](cocina) comida
+- estoy buscando comida [inusual](cocina)
+- comida [danesa](cocina)
+- ¿Qué tal la comida [española](cocina)?
+- Estoy buscando comida [vietnamita](cocina)
+- [española](cocina)
+- un restaurante que sirve comida [rumana](cocina)
+- Estoy buscando comida [libanesa](cocina)
+- comida [italiana](cocina)
+- un restaurante con comida [afgana](cocina)
+- estoy buscando comida [tradicional](cocina)
+- uh quiero comida [cantonesa](cocina)
+- estoy buscando [tailandés](cocina)
+- quiero sentarme [afuera](asiento)
+- quiero sentarme [adentro](asiento)
+- quiero sentarme [al aire libre](asiento)
+- quiero sentarme [interior](asiento)
+- vamos [adentro](asiento)
+- [interior](asiento)
+- [al aire libre](asiento)
+- prefiero sentarme [en el interior](asiento)
+- Me gustaría sentarme [adentro](asiento) por favor
+- Prefiero sentarme [afuera](asiento)
+- mis comentarios son [buenos](comentarios)
+- mis comentarios son [excelentes](comentarios)
+- fue [terrible](comentarios)
+- lo considero un [éxito](comentarios)
+- eres [horrible](comentarios)
+- para diez personas
+- 2 personas
+- para tres personas
+- solo una persona
+- libro para siete personas
+- 2 por favor
+- nueve personas
+
+## intent:gracias
+- um gracias adiós
+- está bien, adiós, gracias
+- está bien, gracias, adiós
+- tú Molas
+- y eso es todo gracias y adiós
+- gracias y adiós
+- perdón por mis errores gracias adiós
+- gracias adiós
+- gracias adios 
+- está bien, gracias, adiós
+- uh gracias adiós
+- gracias adios
+- gracias adios gracias adios
+- aliento gracias adios
+- gracias
+- OK gracias
+- Gracias, adiós
+- ah gracias adios
+- gracias 
+- gracias adios
+- aliento muchas gracias adios
+- Gracias
+- gracias adios
+- ininteligible gracias adios
+- uh ok gracias adiós
+- Gracias adios
+- um ok gracias adiós
+
+## intent:charla
+- ¿Puedes compartir tu jefe conmigo?
+- quiero conocer a tu dueño
+- quiero saber la empresa que te diseñó
+- quiero saber la empresa que te generó
+- quiero conocer la empresa que te inventó
+quiero saber quien te inventó
+- ¿Puedo preguntar quién te inventó?
+- por favor dime la empresa que te creó
+- por favor dime quien te creó
+- cuéntame más sobre tus creadores
+- cuéntame más sobre tus fundadores
+- Ahoy amigo, ¿cómo estás?
+- Estás bien
+- estas teniendo un buen dia
+- ¿Estas bien?
+- estás bien
+- ¿Te sientes bien?
+- cómo van las cosas
+- ¿cómo van las cosas contigo?
+- ¿Cómo están las cosas?
+- cómo estás
+- como estas
+- Cómo estás esta mañana
+- como te sientes
+- cómo estás hoy
+- ¿Cómo estás?
+- ¿Cómo está el clima hoy?
+- ¿Como está el clima?
+- ¿Como está el clima?
+- ¿Qué tiempo hace en tu casa?
+- ¿Hace buen tiempo?
+- ¿Esta lloviendo?
+- ¿Qué se siente ahí fuera?
+- ¿Hace frío o calor?
+- Hermoso día, ¿no?
+- ¿Cuál es el pronóstico del tiempo?
+- ¿Hace bastante viento afuera?
+
+## intent:detener
+- ok entonces no puedes ayudarme
+- eso fue una mierda, no estás ayudando
+- no puedes ayudarme
+- no puedes ayudarme con lo que necesito
+- supongo que no puedes ayudarme entonces
+- ok, supongo que no puedes ayudarme
+- eso no es lo que quiero
+- ok, pero eso no me ayuda
+- esto no conduce a nada
+- esta conversación no es realmente útil
+- no puedes ayudarme con lo que quiero
+- creo que no puedes ayudarme
+- hm no creo que puedas hacer lo que quiero
+- detener
+- espera vuelve
+- tienes algo?
+- ¿Y te llamas empresa de bots? pff
+- ¿y eso es todo?
+- ¿nada más?
+
+## intent:reto_bot
+- ¿Eres un bot?
+- ¿Eres un humano?
+- ¿Estoy hablando con un bot?
+- ¿Estoy hablando con un humano?
