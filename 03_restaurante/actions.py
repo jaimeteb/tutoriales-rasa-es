@@ -6,25 +6,25 @@ from rasa_sdk.forms import FormAction
 
 
 class RestaurantForm(FormAction):
-    """Example of a custom form action"""
+    """Ejemplo de una acción de tipo form"""
 
     def name(self) -> Text:
-        """Unique identifier of the form"""
+        """Nombre de la form"""
 
         return "restaurante_form"
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        """A list of required slots that the form has to fill"""
+        """Lista de los slots que se tienen que llenar para la form"""
 
         return ["cocina", "numero_personas", "asiento_exterior", "preferencias", "comentarios"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
+        """Un diccionario que relaciona los slots requeridos con
+            - una entidad extraída
+            - pares intent-valor
+            - un mensaje completo
+            o una lista de estos, donde la primer coincidencia se conserva"""
 
         return {
             "cocina": self.from_entity(entity="cocina", not_intent="chitchat"),
@@ -45,10 +45,9 @@ class RestaurantForm(FormAction):
             "comentarios": [self.from_entity(entity="comentarios"), self.from_text()],
         }
 
-    # USED FOR DOCS: do not rename without updating in docs
     @staticmethod
     def cocina_db() -> List[Text]:
-        """Database of supported cuisines"""
+        """Base de datos de tipos de cocina soportados"""
 
         return [
             "caribeña",
@@ -62,7 +61,7 @@ class RestaurantForm(FormAction):
 
     @staticmethod
     def is_int(string: Text) -> bool:
-        """Check if a string is an integer"""
+        """Probar si un texto es un entero"""
 
         try:
             int(string)
@@ -70,7 +69,6 @@ class RestaurantForm(FormAction):
         except ValueError:
             return False
 
-    # USED FOR DOCS: do not rename without updating in docs
     def validate_cocina(
         self,
         value: Text,
@@ -78,15 +76,15 @@ class RestaurantForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
-        """Validate cuisine value."""
+        """Validación de los valores de cocina"""
 
         if value.lower() in self.cocina_db():
-            # validation succeeded, set the value of the "cocina" slot to value
+            # validación exitosa, se guarda el valor de "cocina"
             return {"cocina": value}
         else:
             dispatcher.utter_message(template="utter_cocina_equivocada")
-            # validation failed, set this slot to None, meaning the
-            # user will be asked for the slot again
+            # validación fallida, se devuelve el valor None, lo cual
+            # hará que se vuelva a preguntar por el valor
             return {"cocina": None}
 
     def validate_numero_personas(
@@ -96,13 +94,13 @@ class RestaurantForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
-        """Validate numero_personas value."""
+        """Validación de numero de personas"""
 
         if self.is_int(value) and int(value) > 0:
             return {"numero_personas": value}
         else:
             dispatcher.utter_message(template="utter_numero_personas_equivocada")
-            # validation failed, set slot to None
+            # validación fallida, se devuelve el valor None
             return {"numero_personas": None}
 
     def validate_asiento_exterior(
@@ -112,22 +110,22 @@ class RestaurantForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
-        """Validate asiento_exterior value."""
+        """Validación de asiento exterior"""
 
         if isinstance(value, str):
-            if "out" in value:
-                # convert "out..." to True
+            if "fuera" in value:
+                # convertir "fuera..." a True
                 return {"asiento_exterior": True}
-            elif "in" in value:
-                # convert "in..." to False
+            elif "dentro" in value:
+                # convertir "dentro..." a False
                 return {"asiento_exterior": False}
             else:
                 dispatcher.utter_message(template="utter_asiento_exterior_equivocado")
-                # validation failed, set slot to None
+                # validación fallida, se devuelve el valor None
                 return {"asiento_exterior": None}
 
         else:
-            # affirm/deny was picked up as T/F
+            # afirmar/negar se convierte en True/False
             return {"asiento_exterior": value}
 
     def submit(
@@ -136,9 +134,8 @@ class RestaurantForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-        """Define what the form has to do
-            after all required slots are filled"""
+        """Definir lo que se hace cuando se han llenado
+        todos los slots requeridos"""
 
-        # utter submit template
         dispatcher.utter_message(template="utter_submit")
         return []
