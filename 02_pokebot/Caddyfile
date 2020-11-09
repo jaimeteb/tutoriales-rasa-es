@@ -1,6 +1,7 @@
 {$DNS} {
     rewrite /rasa /rasa/
     handle /rasa/* {
+        uri strip_prefix /rasa
         reverse_proxy rasa:5005
     }
 
