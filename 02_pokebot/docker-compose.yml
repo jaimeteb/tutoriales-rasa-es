@@ -2,21 +2,23 @@ version: "3"
 
 services:
   rasa:
-    build:
-      context: .
+    image: jaimeteb/02_pokebot:latest
     env_file: .env
     volumes:
       - models:/app/models
     expose:
       - 5002
+      - 5005
 
   caddy:
     image: caddy
-    command: caddy reverse-proxy --from ${DNS} --to rasa:5002
+    environment:
+      DNS: ${DNS}
     ports:
       - 80:80
       - 443:443
     volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
 

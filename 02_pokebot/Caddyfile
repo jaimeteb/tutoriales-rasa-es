@@ -1,0 +1,10 @@
+{$DNS} {
+    rewrite /rasa /rasa/
+    handle /rasa/* {
+        reverse_proxy rasa:5005
+    }
+
+    handle {
+        reverse_proxy rasa:5002
+    }
+}

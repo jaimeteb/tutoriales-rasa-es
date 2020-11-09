@@ -2,12 +2,14 @@ version: "3"
 
 services:
   rasa:
+    image: jaimeteb/02_pokebot:latest
     build:
       context: .
     env_file: .env
     volumes:
       - models:/app/models
     ports:
+      - 5002:5002
       - 5005:5005
 
 volumes:
