@@ -2,16 +2,17 @@ version: "3"
 
 services:
   rasa:
-    image: us.gcr.io/docker-compose-270405/pokebot:latest
+    build:
+      context: .
     env_file: .env
     volumes:
       - models:/app/models
     expose:
-      - 5005
+      - 5002
 
   caddy:
     image: caddy
-    command: caddy reverse-proxy --from chatbotdemo.ml --to rasa:5005
+    command: caddy reverse-proxy --from ${DNS} --to rasa:5002
     ports:
       - 80:80
       - 443:443
