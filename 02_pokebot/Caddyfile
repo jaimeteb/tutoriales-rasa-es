@@ -1,7 +1,6 @@
 {$DNS} {
-    rewrite /rasa /rasa/
-    handle /rasa/* {
-        uri strip_prefix /rasa
+    rewrite /webhooks /webhooks/
+    handle /webhooks/* {
         reverse_proxy rasa:5005
     }
 
