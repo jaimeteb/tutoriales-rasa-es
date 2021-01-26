@@ -6,23 +6,14 @@ services:
     env_file: .env
     volumes:
       - models:/app/models
-    expose:
-      - 5002
-      - 5005
-
-  caddy:
-    image: caddy
-    environment:
-      DNS: ${DNS}
     ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - $PWD/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
+      - "5002:5002"
+      - "5005:5005"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 800M
 
 volumes:
   models:
-  caddy_data:
-  caddy_config:
